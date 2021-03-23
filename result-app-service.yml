@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+matadata:
+  name: result-service
+  labels:
+    name: result-service
+    author: durga
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetport: 80
+  selector:
+    name: result-pod
+    author: durga
+...
